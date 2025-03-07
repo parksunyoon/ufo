@@ -1,0 +1,63 @@
+<%- include('../layouts/header') %>
+
+<div class="project-detail-container">
+    <div class="project-content">
+        <!-- 왼쪽: 이미지 섹션 -->
+        <div class="image-section">
+            <!-- 메인 이미지 -->
+            <div class="main-image">
+                <img src="/images/projects/<%= project.image %>" alt="<%= project.title %>">
+            </div>
+
+            <!-- 추가 이미지 그리드 -->
+            <div class="additional-images">
+                <% if (project.details && project.details.images) { %>
+                    <% project.details.images.forEach(function(img) { %>
+                        <div class="image-item">
+                            <img src="/images/projects/<%= img %>" alt="<%= project.title %>">
+                        </div>
+                    <% }); %>
+                <% } %>
+            </div>
+        </div>
+
+        <!-- 오른쪽: 제목과 설명 -->
+        <div class="content-section">
+            <!-- 프로젝트 제목과 연도 -->
+            <div class="project-info">
+                <h2><%= project.title %></h2>
+                <p class="year"><%= project.year %></p>
+            </div>
+
+            <!-- 프로젝트 설명 -->
+            <% if (project.title === 'PIKNIC' || project.title === 'NEW COMMUN') { %>
+                <div class="academic-project">
+                    <div class="project-description">
+                        <% project.details.description.forEach(function(desc) { %>
+                            <p><%= desc %></p>
+                        <% }); %>
+                    </div>
+                </div>
+            <% } else if (project.title === 'DW사옥' || project.title === '운중동 단독주택' || project.title === '리프레시') { %>
+                <div class="ongoing-project">
+                    <div class="status"><%= project.details.status %></div>
+                    <div class="participation">
+                        <p><%= project.details.participation.line1 %></p>
+                        <p><%= project.details.participation.line2 %></p>
+                        <% if (project.details.participation.line3) { %>
+                            <p><%= project.details.participation.line3 %></p>
+                        <% } %>
+                    </div>
+                </div>
+            <% } else { %>
+                <div class="project-description">
+                    <% project.details.description.forEach(function(desc) { %>
+                        <p><%= desc %></p>
+                    <% }); %>
+                </div>
+            <% } %>
+        </div>
+    </div>
+</div>
+
+<%- include('../layouts/footer') %>
