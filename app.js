@@ -252,7 +252,13 @@ app.get('/project/:id', (req, res) => {
 });
 
 // 서버 시작
-const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => {
-    console.log(`서버가 http://localhost:${PORT} 에서 실행중입니다.`);
-}); 
+const port = process.env.PORT || 3000;
+
+// Vercel 배포를 위해 수정
+if (process.env.NODE_ENV !== 'production') {
+    app.listen(port, () => {
+        console.log(`Server is running on port ${port}`);
+    });
+}
+
+module.exports = app; 
