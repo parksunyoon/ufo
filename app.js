@@ -2,11 +2,18 @@ const express = require('express');
 const path = require('path');
 const app = express();
 
-// EJS를 뷰 엔진으로 설정
-app.set('view engine', 'ejs');
+// 디버깅을 위한 로깅 추가
+app.use((req, res, next) => {
+    console.log('Request URL:', req.url);
+    next();
+});
 
-// 정적 파일 제공
-app.use(express.static('public'));
+// 정적 파일 설정
+app.use(express.static(path.join(__dirname, 'public')));
+
+// View engine 설정
+app.set('view engine', 'ejs');
+app.set('views', path.join(__dirname, 'views'));
 
 // 프로젝트 데이터
 const projects = [
@@ -224,12 +231,21 @@ const projects = [
 
 // 라우트 설정
 app.get('/', (req, res) => {
-    res.redirect('/about');
+    try {
+        res.render('pages/home');
+    } catch (err) {
+        console.error('Error rendering home:', err);
+        res.status(500).json({ error: err.message });
+    }
 });
 
-// About 페이지 라우트 추가
 app.get('/about', (req, res) => {
-    res.render('pages/about');
+    try {
+        res.render('pages/about');
+    } catch (err) {
+        console.error('Error rendering about:', err);
+        res.status(500).json({ error: err.message });
+    }
 });
 
 app.get('/projects', (req, res) => {
@@ -251,7 +267,7 @@ app.get('/project/:id', (req, res) => {
     res.render('pages/project-detail', { project });
 });
 
-// 에러 핸들링 미들웨어 추가
+// 에러 핸들링
 app.use((err, req, res, next) => {
     console.error('Error:', err);
     res.status(500).json({ error: err.message });
