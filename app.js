@@ -251,6 +251,18 @@ app.get('/project/:id', (req, res) => {
     res.render('pages/project-detail', { project });
 });
 
+// 에러 핸들링 미들웨어 추가
+app.use((err, req, res, next) => {
+    console.error('Error:', err);
+    res.status(500).json({ error: err.message });
+});
+
+// 404 핸들링
+app.use((req, res) => {
+    console.log('404 Not Found:', req.url);
+    res.status(404).json({ error: 'Not Found' });
+});
+
 // 서버 시작
 const port = process.env.PORT || 3000;
 
