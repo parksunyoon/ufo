@@ -637,3 +637,40 @@ body {
     font-weight: 500;
     margin-bottom: 10px;
 }
+
+/* 홈페이지 스타일 */
+.home-container {
+    margin-top: 80px;
+    min-height: 100vh;
+}
+
+.main-visual {
+    height: calc(100vh - 80px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: #f8f8f8;
+}
+
+.main-visual h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    font-weight: normal;
+}
+
+.main-visual p {
+    font-size: 1.2rem;
+    color: #666;
+}
+
+.recent-projects {
+    padding: 4rem 2rem;
+}
+
+.recent-projects h2 {
+    text-align: center;
+    margin-bottom: 3rem;
+    font-weight: normal;
+}
