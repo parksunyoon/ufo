@@ -1,19 +1,105 @@
 <%- include('../layouts/header') %>
 
-<div class="works-container">
-    <div class="works-grid">
-        <% projects.forEach(project => { %>
-            <a href="/project/<%= project.id %>" class="work-item">
-                <img src="/images/projects/imageswb.jpg" alt="SWB">
-                <div class="work-info">
-                    <h3><%= project.title %></h3>
-                    <div class="work-categories">
-                        <%= project.categories.join(', ') %>, <%= project.year %>
-                    </div>
-                </div>
-            </a>
-        <% }) %>
-    </div>
+<div class="projects-grid">
+    <a href="/project/1" class="work-item">
+        <img src="/images/projects/imagerefresh.jpg" alt="Refresh">
+        <div class="work-info">
+            <h3>Refresh</h3>
+            <div class="work-categories">
+                ARCHITECTURE, COMMERCIAL, 2023
+            </div>
+        </div>
+    </a>
+    <a href="/project/2" class="work-item">
+        <img src="/images/projects/imagedw.jpg" alt="DW">
+        <div class="work-info">
+            <h3>DW</h3>
+            <div class="work-categories">
+                ARCHITECTURE, COMMERCIAL, 2023
+            </div>
+        </div>
+    </a>
+    <a href="/project/3" class="work-item">
+        <img src="/images/projects/imageunjung.jpg" alt="Unjung">
+        <div class="work-info">
+            <h3>Unjung</h3>
+            <div class="work-categories">
+                ARCHITECTURE, COMMERCIAL, 2023
+            </div>
+        </div>
+    </a>
+    <a href="/project/4" class="work-item">
+        <img src="/images/projects/imageswb.jpg" alt="SWB">
+        <div class="work-info">
+            <h3>SWB</h3>
+            <div class="work-categories">
+                ARCHITECTURE, COMMERCIAL, 2023
+            </div>
+        </div>
+    </a>
+    <a href="/project/5" class="work-item">
+        <img src="/images/projects/imagejegi.jpg" alt="Jegi">
+        <div class="work-info">
+            <h3>Jegi</h3>
+            <div class="work-categories">
+                ARCHITECTURE, COMMERCIAL, 2023
+            </div>
+        </div>
+    </a>
+    <a href="/project/6" class="work-item">
+        <img src="/images/projects/imagejegi_vacation.jpg" alt="Jegi Vacation">
+        <div class="work-info">
+            <h3>Jegi Vacation</h3>
+            <div class="work-categories">
+                ARCHITECTURE, COMMERCIAL, 2023
+            </div>
+        </div>
+    </a>
+    <a href="/project/7" class="work-item">
+        <img src="/images/projects/imageseongbuk.jpg" alt="Seongbuk">
+        <div class="work-info">
+            <h3>Seongbuk</h3>
+            <div class="work-categories">
+                ARCHITECTURE, COMMERCIAL, 2023
+            </div>
+        </div>
+    </a>
+    <a href="/project/8" class="work-item">
+        <img src="/images/projects/imagenewcommun.jpg" alt="New Commun">
+        <div class="work-info">
+            <h3>New Commun</h3>
+            <div class="work-categories">
+                ARCHITECTURE, COMMERCIAL, 2023
+            </div>
+        </div>
+    </a>
+    <a href="/project/9" class="work-item">
+        <img src="/images/projects/imagealignment.jpg" alt="Alignment">
+        <div class="work-info">
+            <h3>Alignment</h3>
+            <div class="work-categories">
+                ARCHITECTURE, COMMERCIAL, 2023
+            </div>
+        </div>
+    </a>
+    <a href="/project/10" class="work-item">
+        <img src="/images/projects/imagepiknic.jpg" alt="Piknic">
+        <div class="work-info">
+            <h3>Piknic</h3>
+            <div class="work-categories">
+                ARCHITECTURE, COMMERCIAL, 2023
+            </div>
+        </div>
+    </a>
+    <a href="/project/11" class="work-item">
+        <img src="/images/projects/imagebori.jpg" alt="Bori">
+        <div class="work-info">
+            <h3>Bori</h3>
+            <div class="work-categories">
+                ARCHITECTURE, COMMERCIAL, 2023
+            </div>
+        </div>
+    </a>
 </div>
 
 <%- include('../layouts/footer') %> 
