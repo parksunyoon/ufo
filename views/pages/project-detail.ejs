@@ -42,11 +42,9 @@
                 <div class="ongoing-project">
                     <div class="status"><%= project.details.status %></div>
                     <div class="participation">
-                        <p><%= project.details.participation.line1 %></p>
-                        <p><%= project.details.participation.line2 %></p>
-                        <% if (project.details.participation.line3) { %>
-                            <p><%= project.details.participation.line3 %></p>
-                        <% } %>
+                       <% Object.values(project.details.participation).forEach(function(line) { %>
+                        <p><%= line %></p>
+                       <% }) %>
                     </div>
                 </div>
             <% } else { %>

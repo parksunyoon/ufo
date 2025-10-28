@@ -30,7 +30,9 @@ const projects = [
             participation: {
                 line1: '대지위치: 여주시',
                 line2: '용도: 근린생활시설 (남자 사우나 리모델링)',
-                line3: '프로젝트 유형: 리모델링'
+                line3: '프로젝트 유형: 리모델링',
+                line4: '참여작 (총괄 PM)',
+                line5: '삶것건축사사무소(팀장)'
             },
             images: ['refresh_1.jpg', 'refresh_2.jpg']
         }
@@ -39,7 +41,7 @@ const projects = [
         id: 2,
         title: 'DW사옥',
         categories: ['ARCHITECTURE', 'COMMERCIAL'],
-        year: '2024',
+        year: '2025',
         location: '',
         image: 'dw.jpg',
         description: '새로운 오피스 공간',
@@ -49,14 +51,14 @@ const projects = [
                 line1: '참여작 (총괄 PM)',
                 line2: '삶것건축사사무소(팀장)'
             },
-            images: ['dw.jpg']
+            images: ['dw.jpg', 'dw_1.jpg', 'dw_2.jpg', 'dw_3.jpg']
         }
     },
     {
         id: 3,
         title: '운중동 단독주택',
         categories: ['ARCHITECTURE', 'RESIDENTIAL'],
-        year: '2024',
+        year: '2025',
         location: '',
         image: 'unjung.jpg',
         description: '도시 근교의 새로운 주거',
@@ -66,7 +68,7 @@ const projects = [
                 line1: '참여작 (총괄 PM)',
                 line2: '삶것건축사사무소(팀장)'
             },
-            images: ['unjung.jpg']
+            images: ['unjung_1.jpg', 'unjung_2.jpg', 'unjung_3.jpg', 'unjung_4.jpg']
         }
     },
     {
@@ -94,7 +96,7 @@ const projects = [
         id: 5,
         title: '제기동 협소주택',
         categories: ['ARCHITECTURE', 'RESIDENTIAL'],
-        year: '2023',
+        year: '2022',
         location: '',
         image: 'jegi.jpg',
         description: '도시 속 작은 집',
@@ -115,7 +117,7 @@ const projects = [
         id: 6,
         title: '제기동 바캉스',
         categories: ['ARCHITECTURE', 'RESIDENTIAL'],
-        year: '2023',
+        year: '2021',
         location: '',
         image: 'jegi_vacation.jpg',
         description: '도시 속 휴가',
@@ -135,7 +137,7 @@ const projects = [
         id: 7,
         title: '성북동 삶',
         categories: ['ARCHITECTURE', 'RESIDENTIAL'],
-        year: '2022',
+        year: '2017',
         location: '',
         image: 'seongbuk.jpg',
         description: '도시 속 작은 집',
@@ -155,7 +157,7 @@ const projects = [
     {
         id: 8,
         title: 'NEW COMMUN',
-        categories: ['ARCHITECTURE', 'COMMERCIAL'],
+        categories: ['ARCHITECTURE', 'ACADEMIC'],
         year: '2022',
         location: '',
         image: 'newcommun.jpg',
@@ -173,7 +175,7 @@ const projects = [
         id: 9,
         title: 'Alignment Wall',
         categories: ['ARCHITECTURE', 'RESIDENTIAL'],
-        year: '2022',
+        year: '2021',
         location: '',
         image: 'alignment.jpg',
         description: '도시 속 작은 집',
@@ -192,7 +194,7 @@ const projects = [
     {
         id: 10,
         title: 'PIKNIC',
-        categories: ['ARCHITECTURE', 'COMMERCIAL'],
+        categories: ['ARCHITECTURE', 'CADEMIC'],
         year: '2021',
         location: '',
         image: 'piknic.jpg',
@@ -210,7 +212,7 @@ const projects = [
         id: 11,
         title: 'Bori House',
         categories: ['ARCHITECTURE', 'RESIDENTIAL'],
-        year: '2017',
+        year: '2020',
         location: '',
         image: 'bori.jpg',
         description: '도시 속 작은 주택',
