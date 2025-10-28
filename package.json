@@ -2,9 +2,7 @@
   "name": "ufo-architecture",
   "version": "1.0.0",
   "main": "app.js",
-  "engines": {
-    "node": "18.x"
-  },
+  "engines": { "node": "22.x" },
   "scripts": {
     "start": "node app.js",
     "build": "npm install"
