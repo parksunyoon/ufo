@@ -1,0 +1,17 @@
+<%- include('../layouts/header') %>
+
+<div class="projects-grid">
+  <% projects.forEach(function(p) { %>
+    <a href="/project/<%= p.id %>" class="work-item">
+      <img src="/images/projects/<%= p.image %>" alt="<%= p.title %>">
+      <div class="work-info">
+        <h3><%= p.title %></h3>
+        <div class="work-categories">
+          <%= (p.categories || []).join(', ') %><% if (p.year) { %>, <%= p.year %><% } %>
+        </div>
+      </div>
+    </a>
+  <% }) %>
+</div>
+
+<%- include('../layouts/footer') %>

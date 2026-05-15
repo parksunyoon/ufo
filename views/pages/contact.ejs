@@ -1,0 +1,67 @@
+<%- include('../layouts/header') %>
+
+<div class="contact-container">
+    <div class="contact-content">
+        <section class="contact-section">
+            <h2>Contact</h2>
+            <div class="contact-info">
+                <p>Address: 서울시 동대문구 제기로 4나길 31</p>
+                <p>Email: baka25@naver.com</p>
+            </div>
+        </section>
+
+        <section class="location-section">
+            <h2>찾아오시는 길</h2>
+            <div class="location-info">
+                <p>지하철</p>
+                <ul>
+                    <li>1호선 제기동역 1번 출구</li>
+                    <li>6호선 안암역 4번 출구</li>
+                </ul>
+            </div>
+        </section>
+
+        <div class="map-container">
+            <div id="map" style="width:100%;height:400px;"></div>
+        </div>
+
+        <section class="contact-form-section">
+            <h2>Send Message</h2>
+            <form id="contact-form">
+                <div class="form-group">
+                    <input type="text" id="name" name="name" placeholder="Name" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" id="email" name="email" placeholder="Email" required>
+                </div>
+                <div class="form-group">
+                    <textarea id="message" name="message" placeholder="Message" required></textarea>
+                </div>
+                <button type="submit" class="submit-btn">Send</button>
+            </form>
+        </section>
+    </div>
+</div>
+
+<!-- 카카오맵 스크립트 -->
+<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=80dd2e26ab262ea709de76807b0893f4"></script>
+<script>
+    var container = document.getElementById('map');
+    var options = {
+        center: new kakao.maps.LatLng(37.584277, 127.034667),
+        level: 3
+    };
+    var map = new kakao.maps.Map(container, options);
+    
+    // 마커 추가
+    var markerPosition = new kakao.maps.LatLng(37.584277, 127.034667);
+    var marker = new kakao.maps.Marker({
+        position: markerPosition
+    });
+    marker.setMap(map);
+</script>
+
+<!-- contact.js -->
+<script src="/js/contact.js"></script>
+
+<%- include('../layouts/footer') %>
