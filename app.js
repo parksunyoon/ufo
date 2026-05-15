@@ -23,7 +23,7 @@ const projects = [
         categories: ['ARCHITECTURE', 'COMMERCIAL'],
         year: '2026',
         location: '',
-        image: 'yp_1.jpeg',
+        image: 'yp_1.jpg',
         description: '새로운 상업공간',
         details: {
             status: '레이어드 그리너리',
@@ -32,7 +32,7 @@ const projects = [
                 line2: '용도: 공장 지식산업센터 (휴게공간 & 대회의실)',
                 line3: '프로젝트 유형: 인테리어',
             },
-            images: ['yp_2.jpeg', 'yp_3.jpeg', 'yp_4.jpeg', 'yp_5.jpeg']
+            images: ['yp_2.jpg', 'yp_3.jpg', 'yp_4.jpg', 'yp_5.jpg']
         }
     },  
     {
